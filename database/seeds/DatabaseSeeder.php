@@ -1,5 +1,6 @@
 <?php
 
+use App\Question;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // To make fake data for users and questions insert method create records into database and make methods generate objects and store in memory
+        factory(App\User::class, 3)->create()->each(function ($u) {
+            $u->questions()
+                ->saveMany(
+                    factory(Question::class, rand(1, 5))->make()
+                );
+        });
     }
 }
