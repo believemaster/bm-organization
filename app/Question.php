@@ -9,7 +9,7 @@ class Question extends Model
 {
     // Question belobgs to user
 
-    protected $fillabale = ['title', 'body'];    // Attributes
+    protected $fillable = ['title', 'body'];    // Attributes
 
     public function user()
     {
