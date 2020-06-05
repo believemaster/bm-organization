@@ -7,18 +7,18 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                    <h1>Editing Answer For Question: <strong>{{ $question->title }}</strong></h1>
+                        <h1>Editing answer for question: <strong>{{ $question->title }}</strong></h1>
                     </div>
                     <hr>
-                    <form action="{{ route('questions.answers.update', [$question->id, $answer->id]) }}" method="POST">
+                    <form action="{{ route('questions.answers.update', [$question->id, $answer->id]) }}" method="post">
                         @csrf
-                        @method('PUT')
+                        @method('PATCH')
                         <div class="form-group">
-                            <textarea class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" name="body" id="" rows="7">{{ old('body', $answer->body) }}</textarea>
-                            @if($errors->has('body'))
+                            <textarea class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" rows="7" name="body">{{ old('body', $answer->body) }}</textarea>
+                            @if ($errors->has('body'))
                                 <div class="invalid-feedback">
-                                <strong>{{ $errors->first('body') }}</strong>
-                            </div>
+                                    <strong>{{ $errors->first('body') }}</strong>
+                                </div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -29,6 +29,5 @@
             </div>
         </div>
     </div>
-
 </div>
 @endsection
