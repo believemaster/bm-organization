@@ -10,7 +10,13 @@ class AnswerPolicy
 {
     use HandlesAuthorization;
 
-
+    /**
+     * Determine whether the user can update the answer.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Answer  $answer
+     * @return mixed
+     */
     public function update(User $user, Answer $answer)
     {
         return $user->id === $answer->user_id;
