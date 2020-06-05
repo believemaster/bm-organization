@@ -19,7 +19,7 @@ class FavoritesTableSeeder extends Seeder
         $numberOfUsers = count($users);
 
         foreach (Question::all() as $question) {
-            for ($i = 0; $i < rand(1, $numberOfUsers); $i++) {
+            for ($i = 0; $i < rand(0, $numberOfUsers); $i++) {
                 $user = $users[$i];
 
                 $question->favorites()->attach($user);

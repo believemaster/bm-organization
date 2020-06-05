@@ -21,8 +21,7 @@ class UsersQuestionsAnswersTableSeeder extends Seeder
                     factory(App\Question::class, rand(1, 5))->make()
                 )
                 ->each(function ($q) {
-                    $q->answers()
-                        ->saveMany(factory(App\Answer::class, rand(1, 5))->make());
+                    $q->answers()->saveMany(factory(App\Answer::class, rand(1, 5))->make());
                 });
         });
     }

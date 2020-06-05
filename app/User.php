@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -28,19 +27,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    /**
-     * User can have many questions.
-     *
-     */
     public function questions()
     {
         return $this->hasMany(Question::class);
@@ -67,10 +53,10 @@ class User extends Authenticatable
 
     public function favorites()
     {
-        return $this->belongsToMany(Question::class, 'favorites')->withTimestamps(); //, 'user_id', 'question_id');
+        return $this->belongsToMany(Question::class, 'favorites')->withTimestamps(); //, 'author_id', 'question_id');
     }
 
-    public function voteQuestions() // this is relationship method
+    public function voteQuestions()
     {
         return $this->morphedByMany(Question::class, 'votable');
     }
@@ -80,7 +66,7 @@ class User extends Authenticatable
         return $this->morphedByMany(Answer::class, 'votable');
     }
 
-    public function voteQuestion(Question $question, $vote)  // this is custom logic method
+    public function voteQuestion(Question $question, $vote)
     {
         $voteQuestions = $this->voteQuestions();
         if ($voteQuestions->where('votable_id', $question->id)->exists()) {
@@ -95,5 +81,22 @@ class User extends Authenticatable
 
         $question->votes_count = $upVotes + $downVotes;
         $question->save();
+    }
+
+    public function voteAnswer(Answer $answer, $vote)
+    {
+        $voteAnswers = $this->voteAnswers();
+        if ($voteAnswers->where('votable_id', $answer->id)->exists()) {
+            $voteAnswers->updateExistingPivot($answer, ['vote' => $vote]);
+        } else {
+            $voteAnswers->attach($answer, ['vote' => $vote]);
+        }
+
+        $answer->load('votes');
+        $downVotes = (int) $answer->downVotes()->sum('vote');
+        $upVotes = (int) $answer->upVotes()->sum('vote');
+
+        $answer->votes_count = $upVotes + $downVotes;
+        $answer->save();
     }
 }
