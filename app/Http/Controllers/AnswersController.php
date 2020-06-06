@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use App\Answer;
 use App\Question;
 use Illuminate\Http\Request;
 
 class AnswersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
+
+    public function index(Question $question)
+    {
+        return $question->answers()->with('user')->simplePaginate(3);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -18,13 +26,11 @@ class AnswersController extends Controller
      */
     public function store(Question $question, Request $request)
     {
-        // $this->authorize('body', $request); if user is not logged in
-
         $question->answers()->create($request->validate([
-            'body' => 'required',
-        ]) + ['user_id' => Auth::id()]);
+            'body' => 'required'
+        ]) + ['user_id' => \Auth::id()]);
 
-        return back()->with('success', 'Your answer has been submitted successfully');
+        return back()->with('success', "Your answer has been submitted successfully");
     }
 
     /**
@@ -83,7 +89,6 @@ class AnswersController extends Controller
             ]);
         }
 
-
-        return back()->with('success', 'Your answer has been removed');
+        return back()->with('success', "Your answer has been removed");
     }
 }
