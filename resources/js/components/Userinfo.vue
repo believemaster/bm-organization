@@ -15,8 +15,6 @@
 <script>
 export default {
   props: ["model", "label"],
-  //   <user-info model="..." label=""></user-info> on show.blade.php
-
   computed: {
     postDate() {
       return this.label + " " + this.model.created_date;
