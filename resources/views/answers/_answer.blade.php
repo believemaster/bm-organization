@@ -1,16 +1,16 @@
 <answer :answer="{{ $answer }}" inline-template>
     <div class="media post">
-        @include('shared._vote', [
+        @include ('shared._vote', [
             'model' => $answer
         ])
 
-    <div class="media-body">
-        <form v-if="editing" @submit.prevent="update">
-            <div class="form-group">
-                <textarea rows="10" v-model="body" class="form-control" required></textarea>
+        <div class="media-body">
+            <form v-if="editing" @submit.prevent="update">
+                <div class="form-group">
+                    <textarea rows="10" v-model="body" class="form-control" required></textarea>
                 </div>
                 <button class="btn btn-primary" :disabled="isInvalid">Update</button>
-                <button class="btn btn-secondary" @click="cancel" type="button">Cancel</button>
+                <button class="btn btn-outline-secondary" @click="cancel" type="button">Cancel</button>
             </form>
             <div v-else>
                 <div v-html="bodyHtml"></div>
@@ -21,11 +21,7 @@
                                 <a @click.prevent="edit" class="btn btn-sm btn-outline-info">Edit</a>
                             @endcan
                             @can ('delete', $answer)
-                                <form class="form-delete" method="post" action="{{ route('questions.answers.destroy', [$question->id, $answer->id]) }}">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
-                                </form>
+                                <button @click="destroy" class="btn btn-sm btn-outline-danger">Delete</button>
                             @endcan
                         </div>
                     </div>
@@ -37,5 +33,4 @@
             </div>
         </div>
     </div>
-
 </answer>
