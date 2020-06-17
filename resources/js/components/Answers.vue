@@ -75,8 +75,8 @@ export default {
                     this.nextUrl = data.next_page_url;
                 })
                 .then(() => {
-                    this.answerIds.forEach(Id => {
-                        $this.highlight(`answer-${id}`);
+                    this.answerIds.forEach(id => {
+                        this.highlight(`answer-${id}`);
                     });
                 });
         }

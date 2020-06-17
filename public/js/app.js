@@ -4413,8 +4413,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
         _this2.nextUrl = data.next_page_url;
       }).then(function () {
-        _this2.answerIds.forEach(function (Id) {
-          $this.highlight("answer-".concat(id));
+        _this2.answerIds.forEach(function (id) {
+          _this2.highlight("answer-".concat(id));
         });
       });
     }
