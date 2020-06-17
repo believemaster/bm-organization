@@ -15,6 +15,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -35,9 +36,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
-                        <li><a href="" class="nav-link"> About</a></li>
-                        <li><a href="" class="nav-link"> How It Works</a></li>
-                        <li><a href="" class="nav-link"> Blog</a></li>
+                        <li><a href="{{ url('/') }}" class="nav-link"> Questions</a></li>
+                        <li><a href="{{ url('/about') }}" class="nav-link"> About</a></li>
+                        <li><a href="{{ url('/how-it-works') }}" class="nav-link"> How It Works</a></li>
+                        <li><a href="{{ url('/blogs') }}" class="nav-link"> Blog</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

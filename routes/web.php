@@ -15,11 +15,26 @@
 //     return view('welcome');
 // }');
 
+use Illuminate\Http\Request;
+
+
 Route::get('/', 'QuestionsController@index');
+Route::get('/home', 'QuestionsController@index')->name('home');
+
+Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/how-it-works', 'HomeController@howto')->name('how');
+Route::get('/blogs', 'HomeController@index')->name('blogs');
+
+// Trying BM News Passport OAuth
+// Route::get('/redirect', 'HomeController@getToken')->name('get.token');
+
+// Route::get('/callback', 'HomeController@callback');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::resource('questions', 'QuestionsController')->except('show');
 // Route::post('/questions/{question}/answers', 'AnswersController@store')->name('answers.store');

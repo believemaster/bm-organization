@@ -5,15 +5,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                {{-- <div class="card-header">{{ __('Login') }}</div> --}}
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <div class="text-center mb-4">
+                        <img class="mb-4" src="" alt="" width="72" height="72">
+                        <h1 class="h3 mb-3 font-weight-normal">Sign In To ANS</h1>
+                        <p>Ask Questions and Share it with people to <code class="h5">Get</code> Suggestions</p>
+                    </div>
+                    <form class="form-signin" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -65,6 +68,16 @@
                             </div>
                         </div>
                     </form>
+                    {{-- Trying Passport Login BM News
+                        <div class="form-group row mt-5">
+                        <div class="col-md-8 offset-md-4">
+                            <a href="{{ route('get.token') }}">
+                            <button type="submit" class="btn btn-primary">
+                                Login With BM News
+                            </button>
+                            </a>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

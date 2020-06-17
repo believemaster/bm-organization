@@ -9,6 +9,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+body {
+    background: #f5f8fa;
+}
+
 // FontAwesome if not loaded by fontawesome.js then uncomment
 // @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 // @import "~@fortawesome/fontawesome-free/scss/solid.scss";

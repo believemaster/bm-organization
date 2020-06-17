@@ -19,5 +19,5 @@
         @endif
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-outline-primary btn-lg">{{ $buttonText }}</button>
+        <button type="submit" class="btn btn-outline-primary btn-md">{{ $buttonText }}</button>
     </div>

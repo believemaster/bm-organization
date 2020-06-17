@@ -17,10 +17,10 @@
             ></answer>
 
             <div class="text-center mt-3" v-if="nextUrl">
-              <button
-                @click.prevent="fetch(nextUrl)"
-                class="btn btn-outline-secondary"
-              >Load more answers</button>
+              <button @click.prevent="fetch(nextUrl)" class="btn btn-outline-secondary">
+                Load more answers
+                <i class="fas fa-arrow-down"></i>
+              </button>
             </div>
           </div>
         </div>
