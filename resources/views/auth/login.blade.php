@@ -5,8 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                {{-- <div class="card-header">{{ __('Login') }}</div> --}}
+                <div class="text-center">
+                    <img class="mb-4" src="" alt="" width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal">Sign In To ANS</h1>
+                    <p>Ask Questions and Share it with people to <code class="h5">Get</code> Suggestions</p>
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -53,7 +57,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
 
@@ -63,7 +67,11 @@
                                     </a>
                                 @endif
                             </div>
-                        </div>
+                            <div class="mx-auto mt-3">
+                                <a href="{{ route('google_login') }}" class="btn btn-danger">Login with Google</a>
+                                <a href="{{ route('fb_login') }}" class="btn btn-primary">Login with Facebook</a>
+                            </div>
+                            </div>
                     </form>
                 </div>
             </div>

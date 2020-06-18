@@ -10,7 +10,7 @@
         @endif
     </div>
     <div class="form-group">
-        <label for="question-body">Explain your question</label>
+        <label for="question-body">Explain your question <small>(Include image only if necessary)</small></label>
         <textarea name="body" id="question-body" rows="10" class="my-editor form-control {{ $errors->has('body') ? 'is-invalid' : '' }}">{{ old('body', $question->body) }}</textarea>
         @if($errors->has('body'))
             <div class="invalid-feedback">

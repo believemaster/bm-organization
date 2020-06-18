@@ -18,6 +18,15 @@ Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/how-it-works', 'HomeController@howto')->name('how');
 Route::get('/blogs', 'HomeController@index')->name('blogs');
 
+// OAuths
+Route::get('/sign-in/google', 'Auth\LoginController@googleLogin')->name('google_login');
+Route::get('/sign-in/google/redirect', 'Auth\LoginController@googleLoginRedirect');
+
+Route::get('/sign-in/facebook', 'Auth\LoginController@facebookLogin')->name('fb_login');
+Route::get('/sign-in/facebook/redirect', 'Auth\LoginController@facebookLoginRedirect');
+
+
+
 // Trying BM News Passport OAuth
 // Route::get('/redirect', 'HomeController@getToken')->name('get.token');
 
