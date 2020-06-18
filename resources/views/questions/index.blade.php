@@ -9,7 +9,7 @@
                     <div class="d-flex align-items-center">
                         <h2>All Questions</h2>
                         <div class="ml-auto">
-                        <a href="{{ route('questions.create') }}" class="btn btn-outline-secondary">Ask Question</a>
+                        <a href="{{ route('questions.create') }}" class="btn btn-outline-secondary">Ask Question <i class="fa fa-question"></i></a>
                         </div>
                     </div>
                 </div>
@@ -35,13 +35,13 @@
                                     <h3 class="mt-0"><a href="{{ $question->url }}">{{ $question->title }}</a></h3>
                                     <div class="ml-auto">
                                         @can ('update', $question)
-                                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit</a>
+                                            <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit <i class="fa fa-pencil-alt"></i></a>
                                         @endcan
                                         @can ('delete', $question)
                                             <form class="form-delete" method="post" action="{{ route('questions.destroy', $question->id) }}">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete <i class="fas fa-trash-alt"></i></button>
                                             </form>
                                         @endcan
                                     </div>
@@ -50,7 +50,9 @@
                             Asked by <a href="{{ $question->user->url }}">{{ $question->user->name }}</a>
                             <small class="text-muted">{{ $question->created_date }}</small>
                             </p>
-                            {{ str_limit($question->body, 250) }}
+                            {{-- {{ str_limit($question->body, 250) }} --}}
+                            {{-- For HTML TAGS REMOVAL BELOW CODE--}}
+                            {{ str_limit(strip_tags($question->body_html), 300) }}
                             </div>
                         </div>
                         <hr>

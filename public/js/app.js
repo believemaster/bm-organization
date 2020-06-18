@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowDown.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faArrowDown.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'arrow-down', icon: [448, 512, [], "f063", "M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"] };
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faBackward.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faBackward.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'backward', icon: [512, 512, [], "f04a", "M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"] };
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/fontawesome-free-solid/faCaretDown.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@fortawesome/fontawesome-free-solid/faCaretDown.js ***!
@@ -119,6 +141,39 @@ module.exports = { prefix: 'fas', iconName: 'check', icon: [512, 512, [], "f00c"
 
 /***/ }),
 
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faExclamation.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faExclamation.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'exclamation', icon: [192, 512, [], "f12a", "M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"] };
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faPencilAlt.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faPencilAlt.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'pencil-alt', icon: [512, 512, [], "f303", "M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"] };
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faQuestion.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faQuestion.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'question', icon: [384, 512, [], "f128", "M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"] };
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/fontawesome-free-solid/faStar.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@fortawesome/fontawesome-free-solid/faStar.js ***!
@@ -127,6 +182,17 @@ module.exports = { prefix: 'fas', iconName: 'check', icon: [512, 512, [], "f00c"
 /***/ (function(module, exports) {
 
 module.exports = { prefix: 'fas', iconName: 'star', icon: [576, 512, [], "f005", "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"] };
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/fontawesome-free-solid/faTrashAlt.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free-solid/faTrashAlt.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'trash-alt', icon: [448, 512, [], "f2ed", "M0 84V56c0-13.3 10.7-24 24-24h112l9.4-18.7c4-8.2 12.3-13.3 21.4-13.3h114.3c9.1 0 17.4 5.1 21.5 13.3L312 32h112c13.3 0 24 10.7 24 24v28c0 6.6-5.4 12-12 12H12C5.4 96 0 90.6 0 84zm416 56v324c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V140c0-6.6 5.4-12 12-12h360c6.6 0 12 5.4 12 12zm-272 68c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208zm96 0c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208zm96 0c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208z"] };
 
 /***/ }),
 
@@ -51712,12 +51778,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_solid_faStar_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faStar_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _fortawesome_fontawesome_free_solid_faCheck_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faCheck.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faCheck.js");
 /* harmony import */ var _fortawesome_fontawesome_free_solid_faCheck_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faCheck_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faBackward_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faBackward.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faBackward.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faBackward_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faBackward_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faQuestion_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faQuestion.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faQuestion.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faQuestion_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faQuestion_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faExclamation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faExclamation.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faExclamation.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faExclamation_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faExclamation_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowDown.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowDown.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowDown_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faPencilAlt_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faPencilAlt.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faPencilAlt.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faPencilAlt_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faPencilAlt_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faTrashAlt_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faTrashAlt.js */ "./node_modules/@fortawesome/fontawesome-free-solid/faTrashAlt.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faTrashAlt_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faTrashAlt_js__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
 
 
-_fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_0__["default"].library.add(_fortawesome_fontawesome_free_solid_faCaretUp_js__WEBPACK_IMPORTED_MODULE_1___default.a, _fortawesome_fontawesome_free_solid_faCaretDown_js__WEBPACK_IMPORTED_MODULE_2___default.a, _fortawesome_fontawesome_free_solid_faCheck_js__WEBPACK_IMPORTED_MODULE_4___default.a, _fortawesome_fontawesome_free_solid_faStar_js__WEBPACK_IMPORTED_MODULE_3___default.a);
+
+
+
+
+
+
+_fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_0__["default"].library.add(_fortawesome_fontawesome_free_solid_faCaretUp_js__WEBPACK_IMPORTED_MODULE_1___default.a, _fortawesome_fontawesome_free_solid_faCaretDown_js__WEBPACK_IMPORTED_MODULE_2___default.a, _fortawesome_fontawesome_free_solid_faCheck_js__WEBPACK_IMPORTED_MODULE_4___default.a, _fortawesome_fontawesome_free_solid_faStar_js__WEBPACK_IMPORTED_MODULE_3___default.a, _fortawesome_fontawesome_free_solid_faBackward_js__WEBPACK_IMPORTED_MODULE_5___default.a, _fortawesome_fontawesome_free_solid_faQuestion_js__WEBPACK_IMPORTED_MODULE_6___default.a, _fortawesome_fontawesome_free_solid_faExclamation_js__WEBPACK_IMPORTED_MODULE_7___default.a, _fortawesome_fontawesome_free_solid_faArrowDown_js__WEBPACK_IMPORTED_MODULE_8___default.a, _fortawesome_fontawesome_free_solid_faPencilAlt_js__WEBPACK_IMPORTED_MODULE_9___default.a, _fortawesome_fontawesome_free_solid_faTrashAlt_js__WEBPACK_IMPORTED_MODULE_10___default.a);
 
 /***/ }),
 

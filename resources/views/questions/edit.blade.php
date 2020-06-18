@@ -9,7 +9,7 @@
                     <div class="d-flex align-items-center">
                         <h2>Edit Question</h2>
                         <div class="ml-auto">
-                        <a href="{{ route('questions.index') }}" class="btn btn-outline-secondary">Back To All Questions</a>
+                        <a href="{{ route('questions.index') }}" class="btn btn-outline-secondary">Back <i class="fa fa-backward"></i></a>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
                         <div class="d-flex align-items-center">
                             <h2>{{ $question->title }}</h2>
                             <div class="ml-auto">
-                            <a href="{{ route('questions.index') }}" class="btn btn-outline-secondary">Back To All Questions</a>
+                            <a href="{{ route('questions.index') }}" class="btn btn-outline-secondary">Back <i class="fa fa-backward"></i></a>
                             </div>
                         </div>
                     </div>
@@ -67,6 +67,18 @@
                                         <a href="{{ $question->user->url }}">{{ $question->user->name }}</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="ml-auto">
+                                @can ('update', $question)
+                                    <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit <i class="fa fa-pencil-alt"></i></a>
+                                @endcan
+                                @can ('delete', $question)
+                                    <form class="form-delete" method="post" action="{{ route('questions.destroy', $question->id) }}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete <i class="fa fa-trash-alt"></i></button>
+                                    </form>
+                                @endcan
                             </div>
                         </div>
                     </div>

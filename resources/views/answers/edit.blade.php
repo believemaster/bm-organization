@@ -22,7 +22,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-outline-primary">Update</button>
+                            <button type="submit" class="btn btn-md btn-outline-primary">Update</button>
                         </div>
                     </form>
                 </div>
