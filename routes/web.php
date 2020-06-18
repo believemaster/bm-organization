@@ -25,6 +25,14 @@ Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/how-it-works', 'HomeController@howto')->name('how');
 Route::get('/blogs', 'HomeController@index')->name('blogs');
 
+// OAuths
+Route::get('/sign-in/google', 'Auth\LoginController@googleLogin')->name('googleLogin');;
+Route::get('/sign-in/google/redirect', 'Auth\LoginController@googleLoginRedirect');
+
+Route::get('/sign-in/facebook', 'Auth\LoginController@facebookLogin')->name('fbLogin');;
+Route::get('/sign-in/facebook/redirect', 'Auth\LoginController@facebookLoginRedirect');
+
+
 // Trying BM News Passport OAuth
 // Route::get('/redirect', 'HomeController@getToken')->name('get.token');
 
@@ -47,3 +55,8 @@ Route::delete('/questions/{question}/favorites', 'FavoritesController@destroy')-
 
 Route::post('/questions/{question}/vote', 'VoteQuestionController');
 Route::post('/answers/{answer}/vote', 'VoteAnswerController');
+
+// Routes Specific for Admin (on Progress)
+// Route::get('questions-list', 'AdminController@index');
+// Route::delete('questions-list/{id}', 'AdminController@destroy')->name('question-delete');
+// Route::get('questions-list', 'AdminController@index');

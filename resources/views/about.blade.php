@@ -15,9 +15,8 @@
                         for users to get into straight of the usage. You can read all questions and the suggested answers by other users
                         who are continuing to grow this this place and want to provide free information to the people out their.
                     </p>
-                    <p><strong>ANS</strong> is a another poject under <a href="https://believemaster.com">Believe Master</a> which will
-                        be soon merged up with a new social media platform for all with loads of feature and new place of social network.
-                        Currently it is still under the development stage and adding up with more and more functionality.
+                    <p><strong>ANS</strong> is a another poject under <a href="https://believemaster.com">Believe Master</a> as an organization
+                        which is having the purpose of solving problems and confusions of people. People can help each other by giving suggestions.
                     </p>
                     <h1 class="d-inline">Features on ANS</h1>
                     <p>

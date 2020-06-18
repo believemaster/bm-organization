@@ -56,15 +56,24 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                {{-- Turn On After Mailtrap --}}
+                                {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
+
+                                <a class="btn btn-link" href="{{ route('register') }}">
+                                    New on AnS? Sign-Up Here.
+                                </a>
+                            </div>
+                            <div class="mx-auto mt-3">
+                                <a href="{{ route('googleLogin') }}" class="btn btn-danger">Google Sign-In</a>
+                                <a href="{{ route('fbLogin') }}" class="btn btn-primary">Facebook Sign-In</a>
                             </div>
                         </div>
                     </form>

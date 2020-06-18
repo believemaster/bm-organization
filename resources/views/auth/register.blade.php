@@ -68,9 +68,16 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-link" href="{{ route('login') }}">
+                                    Already Member ? Sign-In Here.
+                                </a>
+                            </div>
+                            <div class="mx-auto mt-3">
+                                <a href="{{ route('googleLogin') }}" class="btn btn-danger">Google Sign-In</a>
+                                <a href="{{ route('fbLogin') }}" class="btn btn-primary">Facebook Sign-In</a>
                             </div>
                         </div>
                     </form>

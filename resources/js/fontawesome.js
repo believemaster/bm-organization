@@ -7,6 +7,7 @@ import faBackward from "@fortawesome/fontawesome-free-solid/faBackward.js";
 import faQuestion from "@fortawesome/fontawesome-free-solid/faQuestion.js";
 import faExclamation from "@fortawesome/fontawesome-free-solid/faExclamation.js";
 import faArrowDown from "@fortawesome/fontawesome-free-solid/faArrowDown.js";
+import faBrand from "@fortawesome/fontawesome-free/js/brands";
 
 fontawesome.library.add(
     faCaretUp,
@@ -16,5 +17,6 @@ fontawesome.library.add(
     faBackward,
     faQuestion,
     faExclamation,
-    faArrowDown
+    faArrowDown,
+    faBrand
 );

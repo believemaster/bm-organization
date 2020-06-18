@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/prismjs-themes/prism.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/prismjs-themes/prism-coy.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -30,7 +30,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <b class="text-secondary">Ask N Suggest</b>&nbsp; | &nbsp;<small>A BM Organization</small>
                 </a>
-                <button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -87,5 +87,6 @@
     </script>
 
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="float-right">
     <span class="text-muted">{{ postDate }}</span>
     <div class="media mt-2">
       <a :href="user.url" class="pr-2">

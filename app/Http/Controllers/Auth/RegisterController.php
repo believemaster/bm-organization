@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Socialite;
+use Str;
+use Auth;
+use Exception;
+
 class RegisterController extends Controller
 {
     /*
@@ -68,5 +73,75 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function googleLogin()
+    {
+        // Sends the Users Request
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function googleLoginRedirect()
+    {
+        // Redirect the Users To Web
+        try {
+
+
+            $googleUser = Socialite::driver('google')->stateless()->user();
+            $existUser = User::where('email', $googleUser->email)->first();
+
+
+            if ($existUser) {
+                Auth::loginUsingId($existUser->id);
+            } else {
+                $user = new User;
+                $user->name = $googleUser->name;
+                $user->email = $googleUser->email;
+                $user->email_verified_google = $googleUser->id;
+                $user->password = md5(rand(1, 10000));
+                $user->type = '2';
+                $user->img = $googleUser->getAvatar();
+                $user->save();
+                Auth::loginUsingId($user->id);
+            }
+            return redirect()->to('/');
+        } catch (Exception $e) {
+            return 'error';
+        }
+    }
+
+    public function facebookLogin()
+    {
+        // Sends the Users Request
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function facebookLoginRedirect()
+    {
+        // Redirect the Users To Web
+        try {
+
+
+            $facebookUser = Socialite::driver('facebook')->stateless()->user();
+            $existUser = User::where('email', $facebookUser->email)->first();
+
+
+            if ($existUser) {
+                Auth::loginUsingId($existUser->id);
+            } else {
+                $user = new User;
+                $user->name = $facebookUser->name;
+                $user->email = $facebookUser->email;
+                $user->email_verified_facebook = $facebookUser->id;
+                $user->password = md5(rand(1, 10000));
+                $user->type = '2';
+                $user->img = $facebookUser->getAvatar();
+                $user->save();
+                Auth::loginUsingId($user->id);
+            }
+            return redirect()->to('/');
+        } catch (Exception $e) {
+            return 'error';
+        }
     }
 }

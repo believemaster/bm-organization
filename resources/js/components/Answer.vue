@@ -29,8 +29,8 @@
               >Delete</button>
             </div>
           </div>
-          <div class="col-4"></div>
-          <div class="col-4">
+          <!-- <div class="col-4"></div> -->
+          <div class="col-8">
             <user-info :model="answer" label="Answered"></user-info>
           </div>
         </div>
