@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use App\Answer;
 use App\Question;
 use Illuminate\Http\Request;
 
 class AnswersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
+
+    public function index(Question $question)
+    {
+        return $question->answers()->with('user')->simplePaginate(3);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -18,13 +26,18 @@ class AnswersController extends Controller
      */
     public function store(Question $question, Request $request)
     {
-        // $this->authorize('body', $request); if user is not logged in
+        $answer = $question->answers()->create($request->validate([
+            'body' => 'required'
+        ]) + ['user_id' => \Auth::id()]);
 
-        $question->answers()->create($request->validate([
-            'body' => 'required',
-        ]) + ['user_id' => Auth::id()]);
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => "Your answer has been submitted successfully",
+                'answer' => $answer->load('user')
+            ]);
+        }
 
-        return back()->with('success', 'Your answer has been submitted successfully');
+        return back()->with('success', "Your answer has been submitted successfully");
     }
 
     /**
@@ -55,6 +68,13 @@ class AnswersController extends Controller
             'body' => 'required',
         ]));
 
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => 'Your answer has been updated',
+                'body_html' => $answer->body_html
+            ]);
+        }
+
         return redirect()->route('questions.show', $question->slug)->with('success', 'Your answer has been updated');
     }
 
@@ -70,6 +90,12 @@ class AnswersController extends Controller
 
         $answer->delete();
 
-        return back()->with('success', 'Your answer has been removed');
+        if (request()->expectsJson()) {
+            return response()->json([
+                'message' => "Your answer has been removed"
+            ]);
+        }
+
+        return back()->with('success', "Your answer has been removed");
     }
 }
