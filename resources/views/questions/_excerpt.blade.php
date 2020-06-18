@@ -15,13 +15,13 @@
             <h3 class="mt-0"><a href="{{ $question->url }}">{{ $question->title }}</a></h3>
             <div class="ml-auto">
                 @can ('update', $question)
-                    <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit</a>
+                    <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit <i class="fa fa-pencil-alt"></i></a>
                 @endcan
                 @can ('delete', $question)
                     <form class="form-delete" method="post" action="{{ route('questions.destroy', $question->id) }}">
                         @method('DELETE')
                         @csrf
-                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete <i class="fa fa-trash-alt"></i></button>
                     </form>
                 @endcan
             </div>
@@ -31,8 +31,8 @@
     <small class="text-muted">{{ $question->created_date }}</small>
     </p>
     <div class="excerpt">
-        {{ $question->excerpt(250) }}
-        {{-- or {{ str_limit(strip_tags($question->body_html), 300) }} --}}
+        {{-- or {{ $question->excerpt(250) }} --}}
+         {{ str_limit(strip_tags($question->body_html), 300) }}
     </div>
     </div>
 </div>

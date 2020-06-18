@@ -25,7 +25,18 @@
                         <div class="media-body">
                             {!! $question->body_html !!}
                             <div class="row">
-                                <div class="col-4"></div>
+                                <div class="col-4">
+                                    @can ('update', $question)
+                                        <a href="{{ route('questions.edit', $question->id) }}" class="btn btn-sm btn-outline-info">Edit <i class="fa fa-pencil-alt"></i></a>
+                                    @endcan
+                                    @can ('delete', $question)
+                                        <form class="form-delete" method="post" action="{{ route('questions.destroy', $question->id) }}">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete <i class="fa fa-trash-alt"></i></button>
+                                        </form>
+                                    @endcan
+                                </div>
                                 <div class="col-4"></div>
                                 <div class="col-4">
                                     @include ('shared._author', [
