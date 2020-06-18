@@ -4235,25 +4235,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["answer"],
@@ -4537,16 +4518,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -4582,8 +4553,6 @@ md.use(markdown_it_prism__WEBPACK_IMPORTED_MODULE_1___default.a);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MEditor */ "./resources/js/components/MEditor.vue");
-//
-//
 //
 //
 //
@@ -57385,7 +57354,7 @@ var render = function() {
                 staticClass: "btn btn-primary",
                 attrs: { disabled: _vm.isInvalid }
               },
-              [_vm._v("\n                Update\n            ")]
+              [_vm._v("Update")]
             ),
             _vm._v(" "),
             _c(
@@ -57395,7 +57364,7 @@ var render = function() {
                 attrs: { type: "button" },
                 on: { click: _vm.cancel }
               },
-              [_vm._v("\n                Cancel\n            ")]
+              [_vm._v("Cancel")]
             )
           ]
         ),
@@ -57445,11 +57414,7 @@ var render = function() {
                           staticClass: "btn btn-sm btn-outline-danger",
                           on: { click: _vm.destroy }
                         },
-                        [
-                          _vm._v(
-                            "\n                            Delete\n                        "
-                          )
-                        ]
+                        [_vm._v("Delete")]
                       )
                     : _vm._e()
                 ])
@@ -57762,11 +57727,7 @@ var render = function() {
                     staticClass: "btn btn-lg btn-outline-primary",
                     attrs: { type: "submit", disabled: _vm.isInvalid }
                   },
-                  [
-                    _vm._v(
-                      "\n                            Submit\n                        "
-                    )
-                  ]
+                  [_vm._v("Submit")]
                 )
               ])
             ]
@@ -70846,14 +70807,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************!*\
   !*** ./resources/js/components/NewAnswer.vue ***!
   \***********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NewAnswer_vue_vue_type_template_id_cd224eba___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NewAnswer.vue?vue&type=template&id=cd224eba& */ "./resources/js/components/NewAnswer.vue?vue&type=template&id=cd224eba&");
 /* harmony import */ var _NewAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewAnswer.vue?vue&type=script&lang=js& */ "./resources/js/components/NewAnswer.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _NewAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _NewAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -70883,7 +70845,7 @@ component.options.__file = "resources/js/components/NewAnswer.vue"
 /*!************************************************************************!*\
   !*** ./resources/js/components/NewAnswer.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

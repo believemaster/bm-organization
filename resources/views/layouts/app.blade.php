@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/prismjs-themes/prism-coy.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/prismjs-themes/prism.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -85,6 +85,7 @@
             'user' => Auth::user()
         ]) !!}
     </script>
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
